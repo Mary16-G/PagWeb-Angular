@@ -1,0 +1,39 @@
+.table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .table th {
+    background-color: #0f98cee4;
+    color: white;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .table img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .table .activo {
+    color: green !important;
+  }
+  
+  .table .inactivo {
+    color: red !important;
+  }
+  

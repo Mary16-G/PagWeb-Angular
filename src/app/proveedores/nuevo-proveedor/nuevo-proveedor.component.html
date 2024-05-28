@@ -1,0 +1,21 @@
+<!-- nuevo-proveedores.component.html -->
+
+<form>
+    <div>
+      <label for="nombre">Nombre:</label>
+      <br>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="miProveedor.Nombre" required>
+    </div>
+    <div>
+      <label for="DescuentoPor">Descuento por:</label>
+      <br>
+      <input type="text" id="DescuentoPor" name="DescuentoPor" [(ngModel)]="miProveedor.DescuentoPor" required>
+    </div>
+    <div>
+      <label for="correo">Correo:</label>
+      <br>
+      <input type="text" id="correo" name="correo" [(ngModel)]="miProveedor.correo" required>
+    </div>
+    <button type="button" class="me-2 btn btn-outline-dark" (click)="enviarProv()">Agregar Proveedor</button>
+  </form>
+  

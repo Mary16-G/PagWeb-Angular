@@ -1,0 +1,20 @@
+<form>
+    <div>
+      <label for="nom_marca">Nombre:</label>
+      <br>
+      <input type="text" id="nom_marca" name="nom_marca" [(ngModel)]="miMarca.nom_marca" required>
+    </div>
+    <div>
+      <label for="cantidad">Cantidad:</label>
+      <br>
+      <input type="number" id="cantidad" name="cantidad" [(ngModel)]="miMarca.cantidad" required>
+    </div>
+    <div>
+        <label for="logo">logo:</label>
+        <br>
+        <input type="file" class="form-control" accept="image/*" (change)="convertir_B64($event)">
+      </div>
+      <br>
+    <button type="button" class="me-2 btn btn-outline-dark" (click)="enviarMarca()">Agregar Marca</button>
+  </form>
+  

@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Proveedor</th>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Costo</th>
+                <th>Precio</th>
+                <th>Color</th>
+                <th>Marca</th>
+                <th>Categoria</th>
+                <th>Forma</th>
+                <th>Tipo</th>
+                <th>Uso</th>
+                <th>Porcentaje_agua</th>
+                <th>Material</th>
+                <th>Afeccion</th>
+                <th>Estilo</th>
+                <th>Medida</th>
+                <th>TipodeArmazon</th>
+                <th>fechaAdqn</th>
+                <th>fechaRegistro</th>
+                <th>Origen</th>
+                <th>Descripcion</th>
+                <th>cantidad_existente</th>
+                <th>Status</th>
+                <th>Imagen</th>
+                <th>Herramientas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Producto of productos">
+                    <td>{{Producto.provId}}</td>
+                    <td>{{Producto._id}}</td>
+                    <td>{{Producto.Nombre}}</td>
+                    <td>{{Producto.Costo}}</td>
+                    <td>{{Producto.Precio}}</td>
+                    <td>{{Producto.Color}}</td>
+                    <td>{{Producto.Marca}}</td>
+                    <td>{{Producto.Categoria.Nombre}}</td>
+                    <td>{{Producto.Forma}}</td>
+                    <td>{{Producto.Tipo}}</td>
+                    <td>{{Producto.Uso}}</td>
+                    <td>{{Producto.Porcentaje_agua}}</td>
+                    <td>{{Producto.Material}}</td>
+                    <td>{{Producto.Afeccion}}</td>
+                    <td>{{Producto.Estilo}}</td>
+                    <td>{{Producto.Medida}}</td>
+                    <td>{{Producto.TipodeArmazon}}</td>
+                    <td>{{Producto.fechaAdq}}</td>
+                    <td>{{Producto.fechaRegistro}}</td>
+                    <td>{{Producto.Origen}}</td>
+                    <td>{{Producto.Descripcion}}</td>
+                    <td>{{Producto.cantidad_existente}}</td>
+                    <td [class.activo]="Producto.Status === 'Vigente'" [class.inactivo]="Producto.Status === 'inactivo'">{{ Producto.Status }}</td>
+                    <td><img [src]="Producto.Foto" alt="Imagen de {{Producto.Nombre}}" style="max-width: 180px;"></td>
+                    <td>
+                        <div styleshet="display: inline-block;">
+                          <span>
+                            <a [routerLink]="['/EliminarProducto', Producto._id]">
+                            <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                            </a>
+                            </span>
+                            <span class="pl-8">
+                              <a [routerLink]="['/EditarProducto', Producto._id]">
+                              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>  
+                              </a>
+                            </span>
+                        </div>
+                      </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+            

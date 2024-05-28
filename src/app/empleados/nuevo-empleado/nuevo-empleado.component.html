@@ -1,0 +1,29 @@
+<form>
+    <div>
+      <label for="nombre">Nombre:</label>
+      <br>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="miempleado.Nombre" required>
+    </div>
+    <div>
+      <label for="ApellidoP">Apellido Paterno:</label>
+      <br>
+      <input type="text" id="ApellidoP" name="ApellidoP" [(ngModel)]="miempleado.ApellidoP" required>
+    </div>
+    <div>
+        <label for="ApellidoM">Apellido Materno:</label>
+        <br>
+        <input type="text" id="ApellidoM" name="ApellidoM" [(ngModel)]="miempleado.ApellidoM" required>
+      </div>
+    <div>
+      <label for="Cargo">Cargo:</label>
+      <br>
+      <input type="text" id="Cargo" name="Cargo" [(ngModel)]="miempleado.Cargo" required>
+    </div>
+    <div>
+        <label for="Salario">Costo:</label>
+        <br>
+        <input type="number" id="Salario" name="Salario" [(ngModel)]="miempleado.Salario" required>
+    </div>
+    <br>    <br>
+    <button type="button" class="me-2 btn btn-outline-dark" (click)="enviarEmple()">Agregar Empleado</button>
+  </form>

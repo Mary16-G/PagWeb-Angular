@@ -1,0 +1,18 @@
+<div>
+    <label for="nom_marca">Nombre de la marca:</label>
+    <br>
+    <input type="text" id="nom_marca" name="nom_marca" [(ngModel)]="marca.nom_marca">
+  </div>
+  <div>
+    <label for="logo">Logo:</label>
+    <br>
+    <input type="text" id="logo" name="logo" [(ngModel)]="marca.logo">
+  </div>
+  <div>
+    <label for="cantidad">Cantidad:</label>
+    <br>
+    <input type="text" id="cantidad" name="cantidad" [(ngModel)]="marca.cantidad">
+  </div>
+  <br>
+  
+  <button (click)="actualizarMarcas()">Actualizar Marca</button>

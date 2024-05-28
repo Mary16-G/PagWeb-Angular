@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Password</th>
+                    <th>Rol</th>
+                    <th>Email</th>
+                    <th>Foto del usuario</th>
+                    <th>Herramientas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of usuarios">
+                    <td>{{usuario._id}}</td>
+                    <td>{{usuario.Nombre}}</td>
+                    <td>{{usuario.ApellidoP}}</td>
+                    <td>{{usuario.Password}}</td>
+                    <td>{{usuario.Rol}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td><img [src]="usuario.foto" alt="Imagen de {{usuario.Nombre}}" style="max-width: 180px;"></td>
+                    <td>
+                        <div style="display: inline-block;">
+                            <span>
+                                <a [routerLink]="['/EliminarUsuario', usuario._id]">
+                                    <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                                </a>
+                            </span>
+                            <span class="pl-8">
+                                <a [routerLink]="['/EditarUsuario', usuario._id]">
+                                    <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

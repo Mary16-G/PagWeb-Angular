@@ -1,0 +1,19 @@
+<div>
+    <label for="Nombre">Nombre:</label>
+    <br>
+    <input type="text" id="Nombre" name="Nombre" [(ngModel)]="proveedor.Nombre">
+  </div>
+  <div>
+    <label for="DescuentoPor">Descuento por:</label>
+    <br>
+    <input type="text" id="DescuentoPor" name="DescuentoPor" [(ngModel)]="proveedor.DescuentoPor">
+  </div>
+  <div>
+    <label for="correo">Correo:</label>
+    <br>
+    <input type="text" id="correo" name="correo" [(ngModel)]="proveedor.correo">
+  </div>
+  <br>
+  
+  <button (click)="actualizarProveedor()">Actualizar Proveedor</button>
+  

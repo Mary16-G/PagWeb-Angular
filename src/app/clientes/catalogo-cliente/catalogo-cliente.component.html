@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Dirección</th>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Herramientas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <td>{{cliente._id}}</td>
+                    <td>{{cliente.Direccion}}</td>
+                    <td>{{cliente.Nombre}}</td>
+                    <td>{{cliente.Telefono}}</td>
+                    <td>
+                        <!-- <div style="display: inline-block;">
+                            <span>
+                                <a [routerLink]="['/eliminarClientes',cliente._id]">
+                                    <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                                </a>
+                            </span> -->
+                            <!-- <span class="pl-8">
+                                <a [routerLink]="['/EditarCliente', cliente._id]">
+                                    <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+                                </a>
+                            </span> -->
+                        <!-- </div>  -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

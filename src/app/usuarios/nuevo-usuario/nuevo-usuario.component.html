@@ -1,0 +1,36 @@
+
+<h2>Nuevo Usuario</h2>
+
+<form>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <br>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevoUsuario.Nombre" required>
+  </div>
+  <div>
+    <label for="ApellidoP">Apellido Paterno:</label>
+    <br>
+    <input type="text" id="ApellidoP" name="ApellidoP" [(ngModel)]="nuevoUsuario.ApellidoP" required>
+  </div>
+  <div>
+    <label for="email">Correo:</label>
+    <br>
+    <input type="email" id="email" name="email" [(ngModel)]="nuevoUsuario.email" required>
+  </div>
+  <div>
+    <label for="password">Contraseña:</label>
+    <br>
+    <input type="password" id="password" name="password" [(ngModel)]="nuevoUsuario.Password" required>
+  </div>
+  <div>
+    <label for="rol">Rol:</label>
+    <br>
+    <input type="text" id="rol" name="rol" [(ngModel)]="nuevoUsuario.Rol" required>
+  </div>
+  <div>
+    <label for="foto">foto:</label>
+    <br>
+    <input type="file" class="form-control" accept="image/*" (change)="convertir_B64($event)">
+  </div>
+  <button type="button" class="me-2 btn btn-outline-dark" (click)="agregarUsuario()">Agregar Usuario</button>
+</form>

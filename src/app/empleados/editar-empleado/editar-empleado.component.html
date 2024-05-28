@@ -1,0 +1,18 @@
+<div>
+    <label for="Nombre">Nombre:</label>
+    <br>
+    <input type="text" id="Nombre" name="Nombre" [(ngModel)]="empleado.Nombre">
+  </div>
+  <div>
+    <label for="ApellidoP">Apellido Paterno:</label>
+    <br>
+    <input type="text" id="ApellidoP" name="ApellidoP" [(ngModel)]="empleado.ApellidoP">
+  </div>
+  <div>
+    <label for="ApellidoM">Apellido Materno:</label>
+    <br>
+    <input type="text" id="ApellidoM" name="ApellidoM" [(ngModel)]="empleado.ApellidoM">
+  </div>
+  <br>
+  
+  <button (click)="actualizarEmpleado()">Actualizar Empleado</button>

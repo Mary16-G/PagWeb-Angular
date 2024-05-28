@@ -1,0 +1,22 @@
+<div>
+    <h2>Editar Producto</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <label for="Costo">Costo:</label>
+        <br>
+        <input type="number" id="Costo" name="Costo" [(ngModel)]="producto.Costo">
+      </div>
+      <div>
+        <label for="cantidad_existente">Cantidad Existente:</label>
+        <br>
+        <input type="number" id="cantidad_existente" name="cantidad_existente" [(ngModel)]="producto.cantidad_existente">
+      </div>
+      <div>
+        <label for="Uso">Uso:</label>
+        <br>
+        <input type="text" id="Uso" name="Uso" [(ngModel)]="producto.Uso">
+      </div>
+      <br>
+      <button type="submit">Actualizar Producto</button>
+    </form>
+  </div>

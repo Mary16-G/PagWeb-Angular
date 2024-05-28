@@ -1,0 +1,127 @@
+<div>
+    <h2>Agregar Nuevo Producto</h2>
+    <form >
+      <div>
+        <label for="idProducto">ID de Producto:</label>
+        <br>
+        <input type="number" id="idProducto" name="idProducto" [(ngModel)]="nuevoProducto.idProducto" required>
+      </div>
+      <div>
+        <label for="Nombre">Nombre:</label>
+        <br>
+        <input type="text" id="Nombre" name="Nombre" [(ngModel)]="nuevoProducto.Nombre" required>
+      </div>
+      <div>
+        <label for="Categoria">Categoría:</label>
+        <br>
+        <input type="text" id="Categoria" name="Categoria" [(ngModel)]="nuevoProducto.Categoria.Nombre" required>
+      </div>
+      <div>
+        <label for="Forma">Forma:</label>
+        <br>
+        <input type="text" id="Forma" name="Forma" [(ngModel)]="nuevoProducto.Forma" required>
+      </div>
+      <div>
+        <label for="Tipo">Tipo:</label>
+        <br>
+        <input type="text" id="Tipo" name="Tipo" [(ngModel)]="nuevoProducto.Tipo" required>
+      </div>
+      <div>
+        <label for="Color">Color:</label>
+        <br>
+        <input type="text" id="Color" name="Color" [(ngModel)]="nuevoProducto.Color" required>
+      </div>
+      <div>
+        <label for="Marca">Marca:</label>
+        <br>
+        <input type="number" id="Marca" name="Marca" [(ngModel)]="nuevoProducto.Marca" required>
+      </div>
+      <div>
+        <label for="Uso">Uso:</label>
+        <br>
+        <input type="text" id="Uso" name="Uso" [(ngModel)]="nuevoProducto.Uso" required>
+      </div>
+      <div>
+        <label for="Porcentaje_agua">Porcentaje_agua:</label>
+        <br>
+        <input id="Porcentaje_agua" name="Porcentaje_agua" [(ngModel)]="nuevoProducto.Porcentaje_agua" required>
+      </div>
+      <div>
+        <label for="Afeccion">Afeccion:</label>
+        <br>
+        <input type="text" id="Afeccion" name="Afeccion" [(ngModel)]="nuevoProducto.Afeccion" required>
+      </div>
+      <div>
+        <label for="fechaAdq">Fecha de Adquisición:</label>
+        <br>
+        <input type="date" id="fechaAdq" name="fechaAdq" [(ngModel)]="nuevoProducto.fechaAdq" required>
+      </div>
+      <div>
+        <label for="fechaRegistro">Fecha de fechaRegistro:</label>
+        <br>
+        <input type="date" id="fechaRegistro" name="fechaRegistro" [(ngModel)]="nuevoProducto.fechaRegistro" required>
+      </div>
+      <div>
+        <label for="Origen">Origen:</label>
+        <br>
+        <input type="text" id="Origen" name="Origen" [(ngModel)]="nuevoProducto.Origen" required>
+      </div>
+      <div>
+        <label for="Costo">Costo:</label>
+        <br>
+        <input type="number" id="Costo" name="Costo" [(ngModel)]="nuevoProducto.Costo" step="0.01" required>
+      </div>
+      <div>
+        <label for="cantidad_existente">Cantidad Existente:</label>
+        <br>
+        <input type="number" id="cantidad_existente" name="cantidad_existente" [(ngModel)]="nuevoProducto.cantidad_existente" required>
+      </div>
+      <div>
+        <label for="Material">Material:</label>
+        <br>
+        <input type="text" id="Material" name="Material" [(ngModel)]="nuevoProducto.Material" required>
+      </div>
+
+      <br>
+      Proveedor:
+      <br>
+      <select #id_Proveedor class="form-control" (change)="get_id_proveedor(id_Proveedor.value)">
+        <option>Proveedor</option>
+        <option *ngFor="let proveedor of listaProveedores" [value]="proveedor.provId">{{ proveedor.Nombre }}</option>
+      </select>
+      <br>
+
+      <div>
+        <label for="Estilo">Estilo:</label>
+        <br>
+        <input type="text" id="Estilo" name="Estilo" [(ngModel)]="nuevoProducto.Estilo" required>
+      </div>
+      <div>
+        <label for="Medida">Medida:</label>
+        <br>
+        <input type="text" id="Medida" name="Medida" [(ngModel)]="nuevoProducto.Medida" required>
+      </div>
+      <div>
+        <label for="TipodeArmazon">TipodeArmazon:</label>
+        <br>
+        <input type="text" id="TipodeArmazon" name="TipodeArmazon" [(ngModel)]="nuevoProducto.TipodeArmazon" required>
+      </div>
+      <div>
+        <label for="Descripcion">Descripcion:</label>
+        <br>
+        <input type="text" id="Descripcion" name="Descripcion" [(ngModel)]="nuevoProducto.Descripcion" required>
+      </div>
+      
+      <div>
+        <label for="Status">Status:</label>
+        <br>
+        <input type="text" id="Status" name="Status" [(ngModel)]="nuevoProducto.Status" required>
+      </div>
+      <div>
+        <label for="Foto">Foto:</label>
+        <br>
+        <input type="file" class="form-control" accept="image/*" (change)="convertir_B64($event)">
+      </div>
+      <button type="button" class="me-2 btn btn-outline-dark" (click)="enviarProd()">Agregar Producto</button>
+    </form>
+</div>
